@@ -12,7 +12,7 @@ import {
 import { Box } from '@mui/system'
 import { useRouter } from 'next/router'
 import { ReactNode, useEffect } from 'react'
-import { useDrawerContext } from '../../contexts'
+import { useAppThemeContext, useDrawerContext } from '../../contexts'
 
 interface ISideBarProps {
   children: ReactNode
@@ -60,6 +60,7 @@ export const SideBar: React.FC<ISideBarProps> = ({ children }) => {
   const smDown = useMediaQuery(theme.breakpoints.down('sm'))
   const { isDrawerOpen, toggleDrawerOpen, drawerOptions, setDrawerOptions } =
     useDrawerContext()
+  const { toggleTheme } = useAppThemeContext()
 
   useEffect(() => {
     setDrawerOptions([
@@ -115,6 +116,17 @@ export const SideBar: React.FC<ISideBarProps> = ({ children }) => {
                   onClick={smDown ? toggleDrawerOpen : undefined}
                 />
               ))}
+            </List>
+          </Box>
+
+          <Box>
+            <List component="nav">
+              <ListItemButton onClick={toggleTheme}>
+                <ListItemIcon>
+                  <Icon>dark_mode</Icon>
+                </ListItemIcon>
+                <ListItemText primary="Alternar tema" />
+              </ListItemButton>
             </List>
           </Box>
         </Box>

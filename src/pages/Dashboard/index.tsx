@@ -2,6 +2,10 @@ import { NextPage } from 'next'
 import LayoutBasePage from '../../shared/layouts/LayoutBasePage'
 
 const DashboardPage: NextPage = () => {
-  return <LayoutBasePage>TESTANDO 123</LayoutBasePage>
+  return (
+    <LayoutBasePage title="Págian inicial" toolbar={<>toolbar</>}>
+      Conteudo
+    </LayoutBasePage>
+  )
 }
 export default DashboardPage
