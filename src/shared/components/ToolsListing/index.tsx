@@ -1,7 +1,7 @@
 import { Box, Button, Icon, Paper, TextField, useTheme } from '@mui/material'
 import { grey } from '@mui/material/colors'
 
-interface ToolsBarProps {
+interface IToolsBarProps {
   searchText?: string
   showInputSearch?: boolean
   changeTextSearch?: (newText: string) => void
@@ -10,7 +10,7 @@ interface ToolsBarProps {
   clickNew?: () => void
 }
 
-export const ToolsBar: React.FC<ToolsBarProps> = ({
+export const ToolsListing: React.FC<IToolsBarProps> = ({
   searchText = '',
   showInputSearch = false,
   changeTextSearch,

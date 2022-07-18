@@ -18,14 +18,14 @@ interface ISideBarProps {
   children: ReactNode
 }
 
-interface ListItemLinkProps {
+interface IListItemLinkProps {
   to: string
   icon: string
   label: string
   onClick: (() => void) | undefined
 }
 
-const ListItemLink: React.FC<ListItemLinkProps> = ({
+const ListItemLink: React.FC<IListItemLinkProps> = ({
   to,
   icon,
   label,

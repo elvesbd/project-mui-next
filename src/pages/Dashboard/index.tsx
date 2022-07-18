@@ -1,15 +1,24 @@
 import { NextPage } from 'next'
-import { ToolsBar } from '../../shared/components/ToolsBar'
+import { ToolsDetail } from '../../shared/components/ToolsDetail'
+import { ToolsListing } from '../../shared/components/ToolsListing'
 import LayoutBasePage from '../../shared/layouts/LayoutBasePage'
 
 const DashboardPage: NextPage = () => {
   return (
     <LayoutBasePage
       title="Págian inicial"
-      toolbar={<ToolsBar showInputSearch newButtonText="Nova" />}
+      toolbar={
+        <ToolsDetail
+          showSaveComeBackButton
+          showNewButton
+          showSaveComeBackButtonLoading
+          showComeBackButton={false}
+        />
+      }
     >
       Conteudo
     </LayoutBasePage>
   )
 }
 export default DashboardPage
+// <ToolsListing showInputSearch newButtonText="Nova" />
