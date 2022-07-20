@@ -71,8 +71,8 @@ export const SideBar: React.FC<ISideBarProps> = ({ children }) => {
       },
       {
         icon: 'start',
-        path: '/cities',
-        label: 'Cidades',
+        path: '/customers',
+        label: 'Clientes',
       },
     ])
   }, [])
@@ -97,10 +97,7 @@ export const SideBar: React.FC<ISideBarProps> = ({ children }) => {
             alignItems="center"
             justifyContent="center"
           >
-            <img
-              src="/images/logo1.svg"
-              alt="Logomarca Eduardo Mota Advocacia"
-            />
+            <img src="" alt="" />
           </Box>
 
           <Divider />

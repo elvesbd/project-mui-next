@@ -1,12 +1,11 @@
 import { NextPage } from 'next'
 import { ToolsDetail } from '../../shared/components/ToolsDetail'
-// import { ToolsListing } from '../../shared/components/ToolsListing'
 import LayoutBasePage from '../../shared/layouts/LayoutBasePage'
 
-const Dashboard: NextPage = () => {
+const Customers: NextPage = () => {
   return (
     <LayoutBasePage
-      title="Dashboard"
+      title="Clientes"
       toolbar={
         <ToolsDetail
           showSaveAndCloseButtonLoading
@@ -19,5 +18,5 @@ const Dashboard: NextPage = () => {
     </LayoutBasePage>
   )
 }
-export default Dashboard
-// <ToolsListing showInputSearch newButtonText="Nova" />
+
+export default Customers
