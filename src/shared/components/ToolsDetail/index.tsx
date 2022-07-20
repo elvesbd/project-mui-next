@@ -17,13 +17,13 @@ interface IToolsDetail {
   showComeBackButton?: boolean
   showDeleteButton?: boolean
   showSaveButton?: boolean
-  showSaveComeBackButton?: boolean
+  showSaveAndCloseButton?: boolean
 
   showNewButtonLoading?: boolean
   showComeBackButtonLoading?: boolean
   showDeleteButtonLoading?: boolean
   showSaveButtonLoading?: boolean
-  showSaveComeBackButtonLoading?: boolean
+  showSaveAndCloseButtonLoading?: boolean
 
   clickNew?: () => void
   clickComeBack?: () => void
@@ -35,7 +35,7 @@ interface IToolsDetail {
 export const ToolsDetail: React.FC<IToolsDetail> = ({
   newButtonText = 'Novo',
   showSaveButton = true,
-  showSaveComeBackButton = false,
+  showSaveAndCloseButton = false,
   showDeleteButton = true,
   showNewButton = true,
   showComeBackButton = true,
@@ -44,7 +44,7 @@ export const ToolsDetail: React.FC<IToolsDetail> = ({
   showNewButtonLoading = false,
   showComeBackButtonLoading = false,
   showDeleteButtonLoading = false,
-  showSaveComeBackButtonLoading = false,
+  showSaveAndCloseButtonLoading = false,
 
   clickNew,
   clickComeBack,
@@ -88,8 +88,8 @@ export const ToolsDetail: React.FC<IToolsDetail> = ({
         <Skeleton width={122} height={70} animation="wave" />
       )}
 
-      {showSaveComeBackButton &&
-        !showSaveComeBackButtonLoading &&
+      {showSaveAndCloseButton &&
+        !showSaveAndCloseButtonLoading &&
         !smDown &&
         !mdDown && (
           <Button
@@ -104,11 +104,11 @@ export const ToolsDetail: React.FC<IToolsDetail> = ({
               textOverflow="ellipsis"
               overflow="hidden"
             >
-              Salvar e voltar
+              Salvar e fechar
             </Typography>
           </Button>
         )}
-      {showSaveComeBackButtonLoading && !smDown && !mdDown && (
+      {showSaveAndCloseButtonLoading && !smDown && !mdDown && (
         <Skeleton width={180} height={70} animation="wave" />
       )}
 
@@ -158,7 +158,7 @@ export const ToolsDetail: React.FC<IToolsDetail> = ({
         (showNewButton ||
           showDeleteButton ||
           showSaveButton ||
-          showSaveComeBackButton) && (
+          showSaveAndCloseButton) && (
           <Divider variant="middle" orientation="vertical" />
         )}
 

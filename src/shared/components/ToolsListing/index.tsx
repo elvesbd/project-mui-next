@@ -1,5 +1,6 @@
 import { Box, Button, Icon, Paper, TextField, useTheme } from '@mui/material'
 import { grey } from '@mui/material/colors'
+import { Environments } from '../../environment'
 
 interface IToolsBarProps {
   searchText?: string
@@ -37,7 +38,7 @@ export const ToolsListing: React.FC<IToolsBarProps> = ({
             value={searchText}
             onChange={(e) => changeTextSearch?.(e.target.value)}
             size="small"
-            placeholder="Pesquisar..."
+            placeholder={Environments.INPUT_SEARCH}
             InputProps={{
               endAdornment: <Icon sx={{ color: grey[500] }}>search</Icon>,
             }}
